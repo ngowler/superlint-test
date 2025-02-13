@@ -5,6 +5,9 @@
 # For more information, see:
 # https://github.com/github/super-linter
 name: Lint Code Base
+permissions:
+  contents: read
+  pull-requests: write
 
 on:
   push:
@@ -14,9 +17,6 @@ on:
 jobs:
   run-lint:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
